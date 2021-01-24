@@ -4,7 +4,15 @@ window.onload=function(){
     list=document.getElementById('list').getElementsByTagName('li'),
     index=0,
     timer=null;
-    console.log(pic,list);
+    changeMargin();
+    //
+    window.onresize = function(){
+        changeMargin();
+    };
+    function changeMargin(){
+        var width = (document.body.clientWidth)*(620/1920);
+        wrap.style.height = String(width)+'px';
+    }
     // 定义并调用自动播放函数
     timer = setInterval(autoPlay, 2000);
     
