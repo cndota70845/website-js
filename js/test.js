@@ -116,6 +116,19 @@
 // };
 // console.log(list[num-1]);
 
+// var n = window.prompt('斐波那契数列');
+// function Func(n){
+//     while(n>2){
+//         return Func(n-1) + Func(n-2);
+//     };
+//     while(n<=0){
+//         return 0;
+//     }
+//     return 1;
+// };
+// var a = Func(n);
+// console.log(a);
+
 //第一天给1元，第二天给第一天的双倍，持续一个月；
 // var money = 1;
 // var total = 0; 
@@ -128,8 +141,133 @@
 // };
 
 //函数
-test(1,2,3,4,5);
-function test(a,b,c){
-    console.log(arguments.length);
-    console.log(test.length);
+// test(1,2,3,4,5);
+// function test(a,b,c){
+//     console.log(arguments.length);
+//     console.log(test.length);
+// }
+
+//instanceof函数；
+// var A = function(){};
+// var FuncB = function(){};
+// A.prototype.B = FuncB;
+// var a = new A();
+// console.log(a instanceof A);
+
+//递归慎用；
+//预编译；
+// 1.通篇检查语法错误；
+// 1.5.预编译；
+// 2.解释一行执行一行；
+
+// console.log(a,b,test());
+// var a = function(){
+//     var a = b = '你好';
+//     return a;
+// };
+// var b = 5;
+// function test(){
+//     return '世界';
+// }
+// console.log(window.b);
+//函数声明整体提升，变量只有声明是提升的；
+//window，全局域对象；
+//访问一个对象里不存在的属性。默认为undefined；
+
+//
+// function test(a){
+//     console.log(a);  
+//     c = 0;
+//     var c;
+//     a = 5;
+//     b = 6;
+//     console.log(b);
+//     function b(){}
+//     console.log(b);
+// }
+
+// test(2);
+// console.log(2,6,6)
+
+// test{
+//     a:undefined -> 2 -> 1
+// }
+
+//全局上下文 = window；
+//1.找变量 2.找函数声明 3.执行；
+
+// function test(){
+//     var a = b = 1;
+//     return a
+// }
+// console.log(test(),b)
+
+// var b = 3;
+// console.log(a);
+// function a(a){
+//     console.log(a);
+//     var a = 2;
+//     console.log(a);
+//     function a(){
+//         var b = 5;
+//         console.log(b);
+//     }
+// }
+// a(1);
+// a = 1;
+// function test(){
+//     console.log(a);
+//     a = 2;
+//     console.log(a);
+//     var a = 3;
+//     console.log(a);
+// }
+// test();
+// var a;
+
+// console.log(window.a,undefined,2,3)
+
+// function test(){
+//     console.log(b);
+//     if(a){
+//         var b = 2;
+//     }
+//     c = 3;
+//     console.log(c);
+// }
+
+// var a;
+// test();
+// a = 1;
+// console.log(a);
+
+// console.log('undefined',3,1,window.c);
+
+//
+a = 1;
+function test(e){
+    function e(){}
+    arguments[0] = 2;
+    console.log(e);
+    if(a){
+        var b = 3;
+    }
+    var c;
+    a = 4;
+    var a;
+    console.log(b);
+    f = 5;
+    console.log(c);
+    console.log(a);
 }
+
+var a;
+test(1);
+GO = {
+    a:undefined -> 1;
+    test:function;
+}
+AO = {
+    
+}
+console.log()
