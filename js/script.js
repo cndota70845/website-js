@@ -1,17 +1,20 @@
 window.onload=function(){
-    var wrap=document.getElementById('wrap'),
-    pic=document.getElementById('pic').getElementsByTagName("li"),
-    list=document.getElementById('list').getElementsByTagName('li'),
-    index=0,
-    timer=null;
+    var wrap = document.getElementById('wrap'),
+        pic = document.getElementById('pic').getElementsByTagName("li"),
+        list = document.getElementById('list').getElementsByTagName('li'),
+        imgs = document.getElementById("pic").getElementsByTagName("img"),
+        index=0,
+        timer=null;
     changeMargin();
-    //
     window.onresize = function(){
         changeMargin();
     };
     function changeMargin(){
         var width = (document.body.clientWidth)*(620/1920);
         wrap.style.height = String(width)+'px';
+        for(let i = 0; i < imgs.length; i++){
+            imgs[i].height = width;
+        }
     }
     // 定义并调用自动播放函数
     timer = setInterval(autoPlay, 2000);

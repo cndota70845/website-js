@@ -2,6 +2,10 @@
     margin:0;
     padding:0;
     list-style:none;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-style:normal;
+    font-size:14px;
+    letter-spacing:1px;
 }
 .wrap{
     width:100%;
@@ -17,14 +21,14 @@
 }
 .wrap ol{
     position:absolute;
-    right:5px;
     bottom:10px;
+    right:10px;
 }
 .wrap ol li{
     height:20px; 
     width: 20px;
-    background:#ccc;
-    border:solid 1px #666;
+    background:rgba(204,204,204,0.8);
+    border-radius: 100%;
     margin-left:5px;
     color:#000;
     float:left;
@@ -36,6 +40,65 @@
     background:#E97305;
     color:#fff;
 }
-.wrap img{
+.pic img{
     width:100%;
+}
+.title{
+    height: 50px;
+    width: 100%;
+}
+.title .right{
+    width: 50%;
+    float: left;
+    height:100%;
+    text-align: left;
+    line-height: 50px;
+}
+.logo{
+    position: relative;
+    top:10px;
+}
+.left{
+    padding-left:5%;
+    width: 45%;
+    float: left;
+    height:100%;
+    text-align: left;
+    line-height: 50px;
+}
+.left span{
+    padding-left:10px;
+}
+.right li{
+    float: left;
+    width: 25%;
+    cursor: pointer;
+}
+.right li a{
+    cursor: pointer;
+    color:#4A4A4A;
+}
+.right li:hover a{
+    color: #458CFF;
+}
+.right li:hover{
+    background-color:#dedede;
+}
+.content{
+    padding-top:20px;
+    width: 100%;
+}
+.contentA{
+    width: 90%;
+    margin: 0 auto;
+    height: 300px;
+}
+.contentA img{
+    position: relative;
+    top:-3px;
+}
+.contentA span{
+    padding-left:10px;
+    line-height: 50px;
+    font-size: 28px;
 }

@@ -244,30 +244,30 @@
 // console.log('undefined',3,1,window.c);
 
 //
-a = 1;
-function test(e){
-    function e(){}
-    arguments[0] = 2;
-    console.log(e);
-    if(a){
-        var b = 3;
-    }
-    var c;
-    a = 4;
-    var a;
-    console.log(b);
-    f = 5;
-    console.log(c);
-    console.log(a);
-}
+// a = 1;
+// function test(e){
+//     function e(){}
+//     arguments[0] = 2;
+//     console.log(e);
+//     if(a){
+//         var b = 3;
+//     }
+//     var c;
+//     a = 4;
+//     var a;
+//     console.log(b);
+//     f = 5;
+//     console.log(c);
+//     console.log(a);
+// }
 
-var a;
-test(1);
-GO = {
-    a:undefined -> 1;
-    test:function;
-}
-AO = {
+// var a;
+// test(1);
+// GO = {
+//     a:undefined -> 1;
+//     test:function;
+// }
+// AO = {
     
-}
-console.log()
+// }
+// console.log()
