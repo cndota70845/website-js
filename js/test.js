@@ -271,3 +271,34 @@
     
 // }
 // console.log()
+
+// var a = false + 1;
+// console.log(a+'='+1)
+
+// var b = false == 1;
+// //b:false;
+
+// if(typeof(a) && (-true) + (+undefined) + ''){
+//     console.log('通过了');
+// }
+// else{
+//     console.log('没通过');
+// }
+//+undefined:NaN;
+//NaN + (-1) = NaN;
+//NaN + '' = 'NaN';
+
+
+// if(1 + 5 * '3' == 16){
+//     console.log('通过了');
+// }
+// else{
+//     console.log('没通过');
+// }
+
+// console.log(!!' ' +  !!'' - !!false ||'未通过');
+//1
+
+window.a || (window.a = '1');
+console.log(window.a);
+//'1'
