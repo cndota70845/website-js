@@ -299,6 +299,82 @@
 // console.log(!!' ' +  !!'' - !!false ||'未通过');
 //1
 
-window.a || (window.a = '1');
-console.log(window.a);
 //'1'
+// window.a || (window.a = '1');
+// console.log(window.a);
+
+// function test(){
+//     return a;
+//     a = 1;
+//     function a(){
+//         var a =2;
+//     }
+// }
+
+// console.log(test(),'f(a)');
+
+//自动执行，执行完自动销毁；
+//IIFE 立即执行函数；（可做初始化函数）
+// (function(){})();
+
+//立即执行函数执行完之后直接销毁；
+//表达式后面才能加()执行符号
+// var num = (function(a,b){
+//     console.log(a + b);
+//     return a + b;
+// }(2,2)); //w3c建议；
+
+// console.log(num);
+
+// var test = function(){
+//     console.log(1);
+// }();
+
+// (function test(a,b){
+//     console.log(a + b);
+// }(10,90));
+
+// console.log(test());
+// var a = 0;
+
+// a === 2 || function test1(){
+//     console.log(222);
+// }();
+
+// function test(a){
+//     console.log(222);
+// }(6);
+
+//
+// function test(){
+//     var arr = [];
+//     var i = 0;
+//     for(; i < 10;i++){
+//         (function(j){
+//             arr[j] = function(){
+//                 document.write((j+1) + ' ');
+//             }();
+//         }(i))
+//     }
+    
+//     return arr;
+// }
+
+// var myArr = test();
+
+// for (let j = 0; j < 10; j++) {
+//     myArr[j];
+// }
+
+var fn = (
+    function test1(){
+        return 1;
+    },
+
+    function test2(){
+        return '2';
+    }
+)();
+
+console.log(typeof(fn));
+
