@@ -366,15 +366,74 @@
 //     myArr[j];
 // }
 
-var fn = (
-    function test1(){
-        return 1;
-    },
+// var fn = (
+//     function test1(){
+//         return 1;
+//     },
 
-    function test2(){
-        return '2';
+//     function test2(){
+//         return '2';
+//     }
+// )();
+
+// console.log(typeof(fn));
+//括号内的函数忽略名字；
+
+// var a = 10;
+
+// if(function b(){}){
+//     a += typeof(b);
+// }
+
+// console.log(a);
+
+//1.累加器 初始值0，执行一次+1，打印；闭包；
+//2.缓存器 班级学生名字保存在一个数组里，对象中两个方法，加入、离开，每次加入或离开都需要打印新的学生名单；
+
+// function test(){
+//     var arr = ['李红','小明','小张','胖虎','小夫'];
+    
+//     function add(name){
+//         arr.push(name);
+//         arr.forEach(element => {
+//             console.log(element);
+//         });
+//     }
+
+//     function cut(name){
+//         arr = arr.filter(item => item!==name);
+//         arr.forEach(element => {
+//             console.log(element);
+//         });
+//     }
+
+//     function get(){
+//         arr.forEach(element => {
+//             console.log(element);
+//         });
+//     }
+
+//     return [get,cut,add];     
+// }
+
+// var t = test();
+// t[0]();
+// t[1]('李红');
+// t[2]('新人');
+
+//对象
+var teacher = {
+    name:'张三',
+    age:10,
+    teach:function(){
+        console.log('teach方法');
     }
-)();
+}
 
-console.log(typeof(fn));
+delete teacher.name;
+delete teacher.teach;
+
+console.log(teacher);
+
+
 

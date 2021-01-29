@@ -49,25 +49,20 @@
     <div class="content">
         <div class="contentA">
             <p><img alt="" src="./images/po.png" width="12" height="12"><span>我们的产品</span></p>
-            <ul id="test">
-                <li style="cursor: pointer;">1</li>
-                <li style="cursor: pointer;">2</li>
-                <li style="cursor: pointer;">3</li>
-                <li style="cursor: pointer;">4</li>
-                <li style="cursor: pointer;">5</li>
-            </ol>
+            <button id="add">累加</button>
         </div>
     </div>
     <footer></footer>
     <script type="text/javascript">
-        var iLo = document.getElementById('test').querySelectorAll('li');
-        for(var i = 0; i < iLo.length; i++){
-            (function(k){
-                iLo[k].onclick = function(){
-                    console.log(k);
-                }
-            }(i))
-        }
+        var btn = document.getElementById('add');
+        var i = 0;
+        console.log(i);
+        (function(){
+            btn.onclick = function(){
+                i++;
+                console.log(i);
+            }
+        }());
     </script>
 </body>
 </html>
