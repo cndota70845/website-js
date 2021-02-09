@@ -92,14 +92,79 @@
 .contentA{
     width: 90%;
     margin: 0 auto;
-    height: 300px;
 }
 .contentA img{
     position: relative;
     top:-3px;
 }
 .contentA span{
-    padding-left:10px;
+    padding-left: 10px;
     line-height: 50px;
     font-size: 28px;
+}
+.part{
+    float: left;
+    width: calc(100% / 5);
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px 1px rgba(197, 197, 197, 0.5);
+    margin-right: calc(100% / 15);
+    margin-top: 20px;
+}
+.part:nth-child(4){
+    margin-right: 0;
+}
+.part:nth-child(8){
+    margin-right: 0;
+}
+.part p,img{
+    text-align: center;
+}
+.clear{
+  height: 30px;  
+}
+.contentB{
+    width: 90%;
+    margin: 0 auto;
+}
+.contentB img{
+    position: relative;
+    top:-3px;
+}
+.contentB span{
+    padding-left: 10px;
+    line-height: 50px;
+    font-size: 28px;
+}
+.list{
+    height: 320px;
+}
+.list ul li{
+    float: left;
+    width: calc(50% - 40px);
+    margin-right: 40px;
+    display: block;
+    height: 130px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px 1px rgba(197, 197, 197, 0.5);
+    margin-top:20px;
+    padding:20px 10px;
+}
+.list ul li:nth-child(2){
+    margin-right: 0;
+}
+.list ul li:nth-child(4){
+    margin-right: 0;
+}
+.date_M{
+    
+}
+.data_D{
+
+}
+.link{
+    color: #458CFF;
+    font-size: 20px;
+    float: right;
+    line-height: 50px;
+    cursor: pointer;
 }

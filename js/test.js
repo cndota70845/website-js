@@ -868,25 +868,25 @@
 // console.log(arr2);
 
 //继承
-function Teacher(){
-    this.name = 'Mr Li';
-    this.skill = 'JAVA';
-}
+// function Teacher(){
+//     this.name = 'Mr Li';
+//     this.skill = 'JAVA';
+// }
 
-Teacher.prototype = {
-    pSkill: 'JS/JQ'
-}
+// Teacher.prototype = {
+//     pSkill: 'JS/JQ'
+// }
 
-var t = new Teacher();
-console.log(t);
+// var t = new Teacher();
+// console.log(t);
 
-function Student(){
-    this.name = 'Mr. Wang';
-}
-function Buffer(){}
-Buffer.prototype = Teacher.prototype;
-var buffer = new Buffer();
+// function Student(){
+//     this.name = 'Mr. Wang';
+// }
+// function Buffer(){}
+// Buffer.prototype = Teacher.prototype;
+// var buffer = new Buffer();
 
-Student.prototype = buffer;
-var s = new Student();
-console.log(s);
+// Student.prototype = buffer;
+// var s = new Student();
+// console.log(s);

@@ -3,18 +3,31 @@ window.onload=function(){
         pic = document.getElementById('pic').getElementsByTagName("li"),
         list = document.getElementById('list').getElementsByTagName('li'),
         imgs = document.getElementById("pic").getElementsByTagName("img"),
+        part = document.getElementById("container").getElementsByTagName("div"),
         index=0,
         timer=null;
     changeMargin();
+    partHeight();
     window.onresize = function(){
         changeMargin();
+        partHeight();
     };
+    //图片根据屏幕大小缩放
     function changeMargin(){
         var width = (document.body.clientWidth)*(620/1920);
         wrap.style.height = String(width)+'px';
         for(let i = 0; i < imgs.length; i++){
             imgs[i].height = width;
         }
+    }
+    function partHeight(){
+        var width = document.body.clientWidth;
+        var pWidth = (width * 0.9) / 5;
+        var pHeight = pWidth * (127/110);
+        for(let i = 0; i < part.length; i++){
+            part[i].style.height = String(pHeight) + 'px';
+        }
+        document.getElementById("container").style.height = String(pHeight*2 + 60) + 'px';
     }
     // 定义并调用自动播放函数
     timer = setInterval(autoPlay, 2000);
