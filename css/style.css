@@ -132,22 +132,21 @@
 }
 .contentB span{
     padding-left: 10px;
-    line-height: 50px;
-    font-size: 28px;
 }
 .list{
-    height: 320px;
+    height: 360px;
 }
 .list ul li{
     float: left;
     width: calc(50% - 40px);
     margin-right: 40px;
     display: block;
-    height: 130px;
+    height: 110px;
     background: #FFFFFF;
     box-shadow: 0px 1px 3px 1px rgba(197, 197, 197, 0.5);
     margin-top:20px;
     padding:20px 10px;
+    cursor: pointer;
 }
 .list ul li:nth-child(2){
     margin-right: 0;
@@ -155,16 +154,76 @@
 .list ul li:nth-child(4){
     margin-right: 0;
 }
-.date_M{
-    
+.left_B{
+    float: left;
+    width:90px;
+    height: 100%;
 }
-.data_D{
-
+.right_B{
+    float: right;
+    width: calc(100% - 100px);
+    height: 100%;
+}
+.date_M{
+    display: inline-block;
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+}
+.date_D{
+    display: inline-block;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
 }
 .link{
     color: #458CFF;
     font-size: 20px;
     float: right;
     line-height: 50px;
+    cursor: pointer;
+}
+.first{
+    display: inline-block;
+    line-height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.second{
+    display: inline-block;
+    line-height: 30px;
+    color: #C5C5C5;
+    cursor: pointer;
+}
+.contentC{
+    height: 400px;
+}
+.footer{
+    height: 100px;
+    background: #4373B2;
+    padding: 0 10%;
+}
+.intro{
+    height: 100%;
+    width: calc(100% / 4);
+    padding-right: calc(100% / 8);
+    float: left;
+}
+.intro:nth-child(3){
+    padding-right:0;
+}
+.intro p{
+    color: #FFFFFF;
+    line-height: 25px;
+}
+.intro_title{
+    padding-top:20px;
+    font-size: 16px;
+}
+.intro_text{
+    padding-top: 10px;
+    font-size: 12px;
+}
+.intro_text a{
     cursor: pointer;
 }
