@@ -73,6 +73,7 @@
     float: left;
     width: 25%;
     cursor: pointer;
+    text-align: center;
 }
 .right li a{
     cursor: pointer;

@@ -422,18 +422,471 @@
 // t[2]('新人');
 
 //对象
-var teacher = {
-    name:'张三',
-    age:10,
-    teach:function(){
-        console.log('teach方法');
-    }
+// var teacher = {
+//     name:'张三',
+//     age:10,
+//     teach:function(){
+//         console.log('teach方法');
+//     }
+// }
+
+// delete teacher.name;
+// delete teacher.teach;
+
+// console.log(teacher);
+
+// function test(a,b){
+//     this.c = a + b;
+//     console.log(this.c,this);
+// }
+// var b = new test(1,2);
+// b;
+
+//包装类  
+// var a = '你好世界';
+// a.hhh = 123;
+// console.log(a.hhh);
+
+// var arr = [1,2,3,4,5];
+// arr.length = 2;
+// console.log(arr);
+
+// var str = '12345';
+// console.log(str.length);
+// str.length = 2;
+// console.log(str,str.length);
+
+// var name = 'langguiji';
+// name += 10;
+
+// var type = new String(typeof(name));
+
+// if(type.length === 6){
+//     type.text = 'string';
+// }
+
+// console.log(type.text);
+
+// var x = 1,
+//     y = z = 0;//x=0;y=0
+
+// function add(n){
+//     return n = n +1;
+// }
+
+// y = add(x);//y=4;x=1
+
+// function add(n){
+//     return n = n + 3;
+// }
+
+// z = add(x);//z=4,x=1
+
+// console.log(x,y,z);
+
+// function foo(x){
+//     console.log(arguments);
+//     return x;
+// }
+
+// foo(1,2,3,4,5);
+
+// //1
+
+// function foo(x){
+//     console.log(arguments);
+//     return x;
+// }(1,2,3,4,5);
+
+// //
+
+// (function foo(x){
+//     console.log(arguments);
+//     return x;
+// })(1,2,3,4,5);
+
+// function b(x, y, a){
+//     // a = 10;
+//     // console.log(arguments[2]);
+//     arguments[2] = 10;
+//     console.log(a);
+// }
+
+// b(1,2,3);
+
+//ascii 码；
+// var str = 'a';
+
+// var pos = str.charCodeAt(0);
+
+// console.log(pos);
+// function test(val,val1){
+//     this.name = val;
+//     this.age = val1;
+//     this.one = function (){
+//         console.log(`我的名字是${this.name},我的年龄是${this.age}`);
+//     }
+// }
+
+// test.prototype = {
+//     newObject:180,
+//     newFunc:function(){
+//         console.log(this.name,this.age);
+//     }
+// }
+
+// var val = new test('留言',28);
+// val.newFunc();
+// console.log(val,val.newObject);
+
+// function Person(){}
+// Person.prototype.name = 'zhangsan';
+// var p = new Person();
+// console.log(p.__proto__);
+
+//循环 遍历 迭代；
+// const test = new Function('a','b','c','console.log(a+b+c)');
+
+// test(1,2,3);
+//valueOf() 方法返回 Array 对象的原始值
+// var a = ['1','2','3','4'];
+// var b = a.valueOf();
+// console.log(typeof(b));
+
+//toString方法可以转换进制；
+// var num = 18;
+// var num2 = -18;
+// console.log(num.toString(2));
+// console.log(num2.toString(2));
+// console.log(NaN.toString(2));
+// console.log(Infinity.toString(2));
+
+//按非位  ~
+
+// var num  = 1010;
+// console.log(~num);
+
+//布尔操作
+// console.log(!Infinity);
+
+// var a = Boolean(undefined);
+// console.log(typeof(a),a);
+// console.log(!!a);
+// console.log(true && true);
+
+// const obj = {
+//     name:'nihao',
+//     age:68
+// };
+
+// const tpl = {
+//     name:'buhao',
+//     age:0
+// }
+
+// var a = 9;
+// // var c = obj && tpl;
+// // var d = true && null;
+// var b = (a===9) && tpl;
+
+// 非空判断函数；
+// 如果第一个操作决定了结果，永远不会执行第二个；
+// function test(opt){
+//     var a = opt.con?opt.con && opt.val:opt.val;
+//     if(!a == true && a !== 0){//排除undefined,null,NaN,空字符串
+//         return;
+//     }
+//     else{
+//         return a;
+//     }
+// }
+// var a = 10;
+// var b = 123;
+// console.log(b);
+// const newVal = test({con:a===10,val:{name:'李白',skill:'醉剑式'}});
+// b = newVal == undefined?b:newVal;
+// console.log(b);
+
+//指数 指数赋值
+// console.log(Infinity % Math.pow(3,100));
+// var o = Math.pow(3,100);
+// let jojo = 19;
+// jojo **= 2;
+// console.log(o,jojo);
+
+//string + number = str
+// str = 12 + null;
+// num = 12 + false;
+// Str = '12' - '';
+// Num = '12' - '5';
+// console.log(str,num,Str,Num);
+
+//charCodeAt(index)函数
+// const c1 = '你';
+// const c2 = '我';
+// console.log(c1.charCodeAt(),c2.charCodeAt());
+
+// 生成从minNum到maxNum的随机数(整数)
+// function Random(min,max){
+//     if(min>=max){
+//         return window.alert("error");
+//     }
+//     else{
+//         const Min = String(min).length;
+//         const Max = String(max).length;
+//         if(Max > Min){
+
+//         }
+//         else if(Max === Min){
+//             for (let )
+//         }
+//     }
+// }
+
+// function getRandomInt(min,max){
+//     return Math.floor(Math.random()*(max-min+1))+min;
+// }
+
+// // var res = window.prompt().split(',');
+// // console.log(Random(res[0],res[1]));
+// console.log(getRandomInt(1,5));
+
+// for (let index in window) {
+//     console.log(index,window[index]);
+// }
+
+// test: for(const key of [1,2,3,4]){
+//     console.log(key);
+// }
+
+//标签会识别下一个for语句；
+// test:
+// for(let i = 1; i <= 100; i++){
+//     test1:
+//     for(let j = 1; j < 4; j++){
+//         if(i % 3 != 0){
+//             continue test;
+//         }
+//         else if(i === 66){
+//             break test1;
+//         }
+//         console.log(i);
+//     }
+// }
+
+// switch('hello world'){
+//     case 'hello' + ' world':
+//         console.log('Greet');
+//         break;
+//     case 'goodbye':
+//         console.log('Close');
+//         break;
+//     default:
+//         console.log('No message');
+// }
+// var num = 20;
+// switch(true){
+//     case num < 0:
+//         console.log('<');
+//         break;
+//     case num >= 0 && num < 10:
+//         console.log('jjj');
+//         break;
+//     case num >= 10:
+//         console.log('hhhh');
+//         break;
+// }
+
+//原始值 primitive value;
+//引用值 refere value;
+
+// let Person = new Object;
+// var person = new Object;
+// function test(val){s
+//     val.name = 'liuyan';
+// }
+// test(Person);
+// console.log(Person);
+
+// console.log(Person instanceof Array);
+// console.log(window.person);
+
+// eval('let a = 1, b = 2; console.log(a + b)');
+
+// function test(val){
+//     try{
+//         console.log(val);
+//     }
+//     catch(e){
+//         console.log(e);
+//     }
+// }
+
+// test(window.hhhh);
+// console.log(typeof(a));
+// var a = 10;
+// let b = 100;
+// const c = 'nini';
+// c = 'niniww';
+
+//const 可以改键值，object.freeze可以锁定；
+// const p = Object.freeze({
+//     name:'nihao',
+//     age:9090
+// })
+// p.age = 18;
+// console.log(p);
+
+//jar
+// function Car(){}
+
+// Car.prototype.name = 'mazda';
+
+// var car = new Car();
+
+// Car.prototype = {
+//     name:'Benz'
+// }
+
+// console.log(car);
+
+// function Vsd(){}
+
+// Vsd.prototype.name = 'lis';
+
+// var v = new Vsd();
+
+// Vsd.prototype.name = 'Pis';
+
+// console.log(v);
+
+//Date函数；
+// let date = new Date('10:50:20 5/23/2020');
+// console.log(date,typeof(date));
+// let date2 = new Date(Date.UTC(2020,4,23,10,50,20));
+// console.log(date2);
+// let today = new Date(Date.now());
+// console.log(today.toString());//有时区；24时制；
+// console.log(today.toLocaleString())//分上下午；
+// console.log(today.valueOf());//显示毫秒数；
+// console.log(today.toDateString());
+// console.log(today.toTimeString());
+// console.log(date.toLocaleDateString());//yyyy/mm/hh;
+// console.log(today.toLocaleTimeString());//am/pm time;
+// console.log(today.toUTCString());
+
+//RegExp 正则表达式；
+// let pattern1 = /at/g;
+// console.log(pattern1);
+
+// var str = 'abcdefg';
+// console.log(str.substring(1));
+
+
+//字符串练习
+// var a = 'liuyanwudidanhsahsladhndlsahldhndaldhlahlnajdlajsldjdlasnajsdkajdljsnsjdljaljalsdndjaljdldajn';
+
+// function test () {
+//     var arr = [],
+//         num = 0,
+//         arg = arguments;
+
+//     function trans () {
+//         if(num < arg[0].length && arg[0].indexOf(arg[1],num) > 0){
+//             let val = arg[0].indexOf(arg[1],num);
+//             arr.push(val);
+//             num = val + 1;
+//             trans ();
+//         }
+//         else{
+//             return console.log(arr);
+//         }
+//     }
+
+//     return trans();
+// }
+
+// test(a, 'n');
+
+//trim()
+// var a = '       liuyanlovebasketball      ';
+// let b = a.trim();
+// let c = b.repeat(17);
+
+// console.log(a,a.length);
+// console.log(b,b.length);
+// console.log(c,c.length);
+
+//padStart(); padEnd();
+
+// var str = '你的上次不是单纯不能把多次举办冬季课程的花费时间和副驾驶副驾驶尽快发货时间发';
+// let str1 = str.padStart(100,'.');
+// let str2 = str.padEnd(100,'.');
+
+// console.log(str1);
+// console.log(str2);
+
+// let text = 'cat kyu liu hhhh hdj kkkk cat lll cat';
+// let pattern = /cat/g;
+
+// let matches = text.match(pattern);
+
+// console.log(matches);
+
+// var a = {
+//     name:'liuyan',
+//     age:20
+// } 
+
+// // console.log(Object.prototype.toString.call(a));
+
+// let b = [1,2,3];
+
+// console.log(window.a,window.b);
+
+//Set函数去重；
+//
+// let arr = [1,1,2,3,4,5,5,6];
+// let arr2 = [...new Set(arr)];
+// let arr3 = arr.reduce(function(ar,cur = 5) {
+//     if(!ar.includes(cur)) {
+//       ar.push(cur)
+//     }
+//     return ar
+//   },[])
+
+// console.log(arr,arr2,arr3);
+
+// 这种方法会有一个问题：[1,'1']会被当做相同元素，最终输入[1]
+// let arr = [1,1,2,3,4,5,5,6]
+// let arr2 = arr.filter(test);
+
+// function test(element) {
+//     return element >= 5;
+// }
+
+// console.log(arr2);
+
+//继承
+function Teacher(){
+    this.name = 'Mr Li';
+    this.skill = 'JAVA';
 }
 
-delete teacher.name;
-delete teacher.teach;
+Teacher.prototype = {
+    pSkill: 'JS/JQ'
+}
 
-console.log(teacher);
+var t = new Teacher();
+console.log(t);
 
+function Student(){
+    this.name = 'Mr. Wang';
+}
+function Buffer(){}
+Buffer.prototype = Teacher.prototype;
+var buffer = new Buffer();
 
-
+Student.prototype = buffer;
+var s = new Student();
+console.log(s);
