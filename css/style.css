@@ -68,6 +68,7 @@
 }
 .left span{
     padding-left:10px;
+    font-size: 20px;
 }
 .right li{
     float: left;
@@ -77,7 +78,7 @@
 }
 .right li a{
     cursor: pointer;
-    color:#4A4A4A;
+    font-size: 16px;
 }
 .right li:hover a{
     color: #458CFF;
@@ -196,7 +197,9 @@
     cursor: pointer;
 }
 .contentC{
-    height: 400px;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
 }
 .footer{
     height: 100px;
@@ -226,4 +229,30 @@
 }
 .intro_text a{
     cursor: pointer;
+}
+.C_D{
+    float: left;
+    width: 50%;
+    height: calc(100% - 100px);
+    padding: 50px 0;
+}
+.Boder span{
+    line-height: 50px;
+    font-size: 24px;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+.Boder_text{
+    display: inline-block;
+    line-height: 30px;
+    width: 400px;
+    padding-left:30px;
+    padding-top:20px;
+    font-size: 16px;
+}
+.button{
+    margin-top:60px;
+    padding:10px 30px;    
+    border-radius: 3px;
+    border: 1px solid #C2C2C2;
 }
