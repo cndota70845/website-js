@@ -4,6 +4,8 @@ window.onload=function(){
         list = document.getElementById('list').getElementsByTagName('li'),
         imgs = document.getElementById("pic").getElementsByTagName("img"),
         part = document.getElementById("container").getElementsByTagName("div"),
+        leftButton = document.getElementsByClassName('wrap_left'),
+        rightButton = document.getElementsByClassName('wrap_right'),
         index=0,
         timer=null;
     changeMargin();
@@ -12,6 +14,28 @@ window.onload=function(){
         changeMargin();
         partHeight();
     };
+    //左移图片
+    leftButton[0].onclick = function(){
+        var index = 0;
+        for (var i = 0; i < pic.length; ++i) {
+            if(pic[i].style.display == 'block'){
+                index = i;
+            }
+        }
+        index = index == 0?pic.length - 1:index - 1;
+        changePic(index);
+    }
+    //右移图片
+    rightButton[0].onclick = function(curIndex){
+        var index = 0;
+        for (var i = 0; i < pic.length; ++i) {
+            if(pic[i].style.display == 'block'){
+                index = i;
+            }
+        }
+        index = index == pic.length - 1?0:index + 1;
+        changePic(index);
+    }
     //图片根据屏幕大小缩放
     function changeMargin(){
         var width = (document.body.clientWidth)*(620/1920);
