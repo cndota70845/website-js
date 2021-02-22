@@ -288,9 +288,25 @@ body{
 }
 #background{
     width: 100%;
+    background: url('../images/banner2.jpg');
+    background-size: 100% 100%;
 }
-#background img{
-    width: 100%;
+.ins{
+    width: 50%;
+    float: left;
+    padding-left:40px;
+    padding-top: 100px;
+    height: 70%;
+}
+.ins span{
+    font-size: 40px;
+    color: #fff;
+}
+.ins p{
+    padding-top:20px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 30px;
 }
 .news li{
     width: 100%;
@@ -442,3 +458,10 @@ body{
     height: 600px;
     margin: 40px auto;
 }
+.pageArticle{width:100%;position: relative;padding-top: 10px;padding-bottom: 35px;}
+.articleTitle{padding-top:20px;}
+.articleTitle h3{font-size:22px;font-size: 2.2rem;line-height:1.8;text-align:center;}
+.articleAuthor{color:#999;text-align: center;font-size: 0;padding:15px 0;border-bottom: 1px dashed #ccc;border-top: 1px dashed #ccc;margin:20px 0;}
+.articleAuthor span{display: inline-block;*display: inline;*zoom:1;color:#999;font-size: 14px;}
+.articleAuthor i{font-style: normal;color:#999;margin:0 10px;font-size: 14px;}
+.article{font-size: 15px;padding: 15px 0;line-height: 1.7;}
