@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>软开中心主页-产品列表</title>
+    <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=gmwPofA7sQ4lw0LMVR6jcmFmS9YTt2gP"></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <div class="left">
+                <img src="" alt="" width="30" height="30" class="logo">
+                <span>信息中心·软件开发中心</span>
+            </div>
+            <div class="right">
+                <nav>
+                    <ul>
+                        <li><a>首页</a></li>
+                        <li><a>产品</a></li>
+                        <li><a>新闻动态</a></li>
+                        <li><a>联系我们</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="background">
+        <img src="./images/banner1.jpg" alt="">
+    </div>
+    <div id="content">
+        <div class="Big">
+            <div class="BigL">
+                <img alt="" src="">
+                <div id="allmap"></div>
+            </div>
+            <div class="BigR">
+                <div class="contract_adress">
+                    <p><img alt="" src="./images/po.png" width="12" height="12"><span>地址</span></p>
+                    <p>北京市海淀区上园村3号北京交通大学信息中心</p>
+                </div>
+                <div class="contract_adress">
+                    <p><img alt="" src="./images/po.png" width="12" height="12"><span>邮编</span></p>
+                    <p>100015</p>
+                </div>
+                <div class="contract_adress" style="height:250px">
+                    <p><img alt="" src="./images/po.png" width="12" height="12"><span>联系方式</span></p>
+                    <p>服务热线：400-856-8988<br> 
+                        销售热线：400 856 8988 转1键<br>
+                        售后QQ：4008568988 <br>
+                        售后邮箱：4008568988@b.qq.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="intro">
+                <p class="intro_title">关于</p>
+                <p class="intro_text">
+                    <a>关于我们</a> 
+                    <a>常见问题</a>
+                    <a>产品特性</a>
+                    <a>服务条款</a>
+                    <a>联系我们</a>
+                </p>
+            </div>
+            <div class="intro">
+                <p class="intro_title">报价</p>
+                <p class="intro_text">
+                    <a>模块与解决方案</a>
+                    <a>定制与服务</a> 
+                </p>
+            </div>
+            <div class="intro">
+                <p class="intro_title">联系方式</p>
+                <p class="intro_text">邮件：hr@tiup.us 电话：010-56915858</p>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        var height = window.screen.availHeight - 150 - HeiIMg();
+        var content = document.getElementById('content');
+        content.style.minHeight = String(height) + 'px';
+        // HeiIMg();
+        function HeiIMg(){
+            var width = window.innerWidth;
+            var ImgHeight = document.getElementById('background').getElementsByTagName('img');
+            ImgHeight[0].style.height = String(parseInt(width * 0.321)) + 'px';
+            return parseInt(width * 0.321);
+        }
+        window.onresize = function(){
+            HeiIMg();
+        };
+        
+        //百度地图
+        var map = new BMap.Map('allmap');   // 创建Map实例
+        var point = new BMap.Point(116.346613, 39.957346)
+        map.centerAndZoom(point, 17);  // 初始化地图,设置中心点坐标和地图级别   
+        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+        // 在地图上添加点标记
+        var myIcon = new BMap.Icon("images/Sign.png", new BMap.Size(32, 32), {});
+        var marker = new BMap.Marker(point, {icon: myIcon});
+        map.addOverlay(marker);
+    </script>
+</body>
+</html>
